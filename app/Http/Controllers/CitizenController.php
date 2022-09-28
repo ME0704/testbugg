@@ -82,6 +82,6 @@ class CitizenController extends Controller
         $form->zip = $request->input('zip');
         $form->about = $request->input('about');
         $form->update();
-        return redirect('/');
+        return redirect('/display');
     }
 }

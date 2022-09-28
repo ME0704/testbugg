@@ -57,17 +57,19 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($citizens as $citizen)
+                {{-- when u make foreach variable citizens relate to $citizen, this collides with
+                    the original $citizen variable in the same layout, so I only changed this to citibwoy --}}
+                @foreach ($citizens as $citibwoy)
                 <tr>
-                    <td>{{$citizen -> name}}</td>
-                    <td>{{$citizen -> email}}</td>
-                    <td>{{$citizen -> password}}</td>
-                    <td>{{$citizen -> phone}}</td>
-                    <td>{{$citizen -> gender}}</td>
-                    <td>{{$citizen -> language}}</td>
-                    <td>{{$citizen -> zip}}</td>
-                    <td>{{$citizen -> about}}</td>
-                    <td><a href="/edit/{{$citizen -> id}}">Edit</a></td>
+                    <td>{{$citibwoy -> name}}</td>
+                    <td>{{$citibwoy -> email}}</td>
+                    <td>{{$citibwoy -> password}}</td>
+                    <td>{{$citibwoy -> phone}}</td>
+                    <td>{{$citibwoy -> gender}}</td>
+                    <td>{{$citibwoy -> language}}</td>
+                    <td>{{$citibwoy -> zip}}</td>
+                    <td>{{$citibwoy -> about}}</td>
+                    <td><a href="/edit/{{$citibwoy -> id}}">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>
